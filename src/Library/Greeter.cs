@@ -1,30 +1,17 @@
 ﻿using System;
 
+    /*La clase Greeter es un singleton: solo existe una instancia de esa clase a la cual se accede mediante 
+    una propiedad de clase Instance de tipo Greeter. 
+    No es posible crear instancias de esa clase porque el constructor Greeter() es privado.
+    Esto es útil cuando se necesita exactamente un objeto para coordinar acciones en todo el sistema.*/
+
 namespace Library
 {
     public class Greeter
     {
-        private Greeter()
-        {
-            // Intentionally left blank
-        }
-
-        private static Greeter instance;
-
-        public static Greeter Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new Greeter();
-                }
-
-                return instance;
-            }
-        }
 
         public void SayHiToTheWorld()
+        //void SayHiToTheWorld() que es el verdadero propósito de esta clase.
         {
             Console.WriteLine("Hello World!");
         }
